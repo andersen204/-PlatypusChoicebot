@@ -20,10 +20,7 @@ const retryRequest = async (fn, retries = 5, delay = 1000) => {
 		}
 	}
 }
-const recipientChatIds = [
-	'1058775557', // ChatId первого получателя
-	'1349972438', // ChatId второго получателя
-]
+const { recipientChatIds } = process.env
 const userStates = {} // Для хранения состояния пользователей
 const uniqueUsers = new Set() // Множество для хранения уникальных пользователей
 
